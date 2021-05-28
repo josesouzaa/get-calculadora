@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+
+$fonte: "Roboto", sans-serif;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+form {
+  box-sizing: border-box;
+  max-width: 400px;
+  background-image: linear-gradient(135deg, lighten(#85feff, 10%), lighten(#78ffb3, 10%));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.4);
+  font-family: $fonte;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  gap: 20px;
+  label {
+    align-self: center;
+    justify-self: end;
+    text-align: right;
+    font-weight: bold;
+  }
+  input,
+  select {
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px;
+    font-family: $fonte;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+  h1 {
+    grid-column: 1 / 3;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: $fonte;
+    margin: 0 0 10px 0;
+  }
+  button {
+    justify-self: center;
+    grid-column: 1 / 3;
+    cursor: pointer;
+    font-family: $fonte;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    &:hover {
+      box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+  #genero {
+    grid-column: 2 / 3;
+    input,
+    label {
+      display: inline-block;
+      font-weight: normal;
+    }
+  }
+}
+
+#resultado {
+  display: none;
+}
+
+#resultado.ativo {
+  display: block;
+  box-sizing: border-box;
+  margin-top: 20px;
+  max-width: 400px;
+  text-align: center;
+  font-family: $fonte;
+  background: #e5e9e9;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.4);
+  padding: 20px;
+  span {
+    font-weight: bold;
+  }
+}
+
+.invalido {
+  border: 1px solid red;
+}
